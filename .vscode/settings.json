@@ -3,5 +3,6 @@
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
     "editor.linkedEditing": false,
-    "editor.snippetSuggestions": "none"
+    "editor.snippetSuggestions": "none",
+    "workbench.colorTheme": "GitHub Light Default"
 }
