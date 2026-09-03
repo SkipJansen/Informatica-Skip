@@ -12,6 +12,6 @@
             $x = 13;
             $naam = "Skip Jansen";
         ?>
-    </body>
         <p> <?= $x ?></p>
+    </body>
 </html>
