@@ -16,11 +16,18 @@
             $dag6 = "zaterdag";
             $dag7 = "zondag";
     
-            $dagen = array( "maandag", "disndag", "woensdag", "woensdag", "donderdag", "vrijdag", "zatredag", "zondag"
+            $dagen = array( "maandag", "disndag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"
             );
+        
+       echo "<ul>"     ; 
+
+            foreach($dagen as $dag) {
+                echo "<li>" . htmlspecialchars($dag) . "</li>";
+}
+        echo "</ul>"
         ?>
 
-        <p> <?= $dagen [3]?> </p>
+        
     </body>
 
 </html>
