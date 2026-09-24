@@ -28,16 +28,29 @@
     // het gemiddelde volgt uit de som gedeeld door het aantal.
     $gemiddelde = $totaal / $aantal;
 
+$onvoldoendes = 0;
 $laagste = $cijfers[0];
 $hoogste = $cijfers[0];
-foreach( $cijfers as $getal) {
-$cijfers < $laagste;
-$laagste = $cijfers;
+for ($i = 0; $i < $aantal; $i++) {
+//foreach( $cijfers as $getal) { ;
+if ($cijfers[$i] < $laagste){
+$laagste = $cijfers[$i] ;
+} 
+if ($cijfers[$i] > $hoogste){
+    $hoogste = $cijfers[$i] ;
+}
+if ($cijfers[$i] <= 5.4){
+    $onvoldoendes++ ;
+}
 }
 
 
 
 ?>
         <p>Het gemiddelde cijfer is <?= $gemiddelde ?></p>
+        <p>Het laagste cijfer is <?= $laagste ?></p>
+        <p>Het hoogste cijfer is <?= $hoogste ?></p>
+        <p>Het aantal onvoldoendes is <?= $onvoldoendes ?></p>
+        <p>Het percentage onvoldoendes is <?= 100*$onvoldoendes / $aantal ?></p>
     </body>
 </html>
