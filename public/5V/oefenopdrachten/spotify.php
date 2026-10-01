@@ -10,9 +10,9 @@
 <?php
 
     $top10 = array( "Qlas, Antoon & Boef – 100 Tranen"
+                  , "SIENNA SPIRO – Great Expectation"
                   , "Bankzitters & Robert van Hemert – Rapido"
                   , "Milolaathetlukken – Alleen Jij"
-                  , "SIENNA SPIRO – Great Expectation"
                   , "Rutger van Barneveld – Zwoele Zomernachten"
                   , "Shakira, Burna Boy – Dai Dai"
                   , "Justen de Wildt – Cheerio"
@@ -20,8 +20,15 @@
                   , "HUGEL, SOLTO – Jamaican (Bam Bam)"
                   , "Ray & Beer – Zonnebank"
                   );
-
+    ?>
+    <ol>
+<?php
+    for ( $i = 0 ; $i < count($top10) ; $i++ ){
+?>      
+        <li> <?= $top10[$i]?></li>
+<?php
+    }
 ?>
-
+    </ol>
     </body>
 </html>
