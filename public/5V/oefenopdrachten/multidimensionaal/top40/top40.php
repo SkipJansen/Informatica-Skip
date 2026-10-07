@@ -59,7 +59,7 @@
                   , array( "notering"   => 8
                          , "vorige"     => 5
                          , "weken"      => 9
-                         , "titel"      => "Choosin\' Texas"
+                         , "titel"      => "Choosin Texas"
                          , "artiest"    => "Ella Langley"
                          , "afbeelding" => "https://www.top40.nl/media/cache/list/uploads/title/176779/7292481552767447865.jpg"
                          , "audio"      => "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/46/fe/e0/46fee029-a806-e843-ba05-1e1da112b2a7/mzaf_15765534428539680650.plus.aac.p.m4a"
@@ -75,7 +75,7 @@
                   , array( "notering"   => 10
                          , "vorige"     => 10
                          , "weken"      => 14
-                         , "titel"      => "My Body Isn\'t Ready"
+                         , "titel"      => "My Body Isn't Ready"
                          , "artiest"    => "Sombr"
                          , "afbeelding" => "https://www.top40.nl/media/cache/list/uploads/subtitle/44909_53850/original.jpg"
                          , "audio"      => "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/fc/02/8dfc0240-e88d-aad3-6250-be1a0647a626/mzaf_8060606026433109264.plus.aac.p.m4a"
@@ -139,7 +139,7 @@
                   , array( "notering"   => 18
                          , "vorige"     => 19
                          , "weken"      => 5
-                         , "titel"      => "Ain\'t In LA"
+                         , "titel"      => "Ain't In LA"
                          , "artiest"    => "Adéla"
                          , "afbeelding" => "https://www.top40.nl/media/cache/list/uploads/subtitle/45056_53999/original.jpg"
                          , "audio"      => "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/af/19/98/af1998ee-ed0e-4655-ec27-610c78dcb4fc/mzaf_18150537039377466708.plus.aac.p.m4a"
@@ -211,7 +211,7 @@
                   , array( "notering"   => 27
                          , "vorige"     => 27
                          , "weken"      => 9
-                         , "titel"      => "Movin\' To The Sun"
+                         , "titel"      => "Movin To The Sun"
                          , "artiest"    => "Hugel, Imael Angel & Ultra Naté"
                          , "afbeelding" => "https://www.top40.nl/media/cache/list/uploads/title/178228/6195068713098801891.jpg"
                          , "audio"      => "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a9/d2/09/a9d209b4-55a5-67e8-2e15-949cb00e716d/mzaf_11935934741751979581.plus.aac.p.m4a"
