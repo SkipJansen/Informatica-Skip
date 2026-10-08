@@ -9,6 +9,18 @@
             td{
                 border: 1px solid black;
             }
+            .nieuw{
+                color blue: 
+            }
+            .gestegen{
+                color groen: 
+            }
+            .gezakt{
+                color rood: 
+            }
+            .gelijk{
+                color geel: 
+            }
             </style>
     </head>
     <body>
@@ -20,21 +32,34 @@
     for ( $i = 0 ; $i < count($top40) ; $i++ ){
 
     $nummer = $top40[$i];
+
+    $huidige_positie = $nummer["notering"];
+    $vorige_positie =   $nummer["vorige"]; 
+
+
+    if ($vorige_positie == "-") {
+        $verandering = "nieuw";
+    } elseif ($huidige_positie < $vorige_positie) {
+        $verandering = "gestegen";
+    } elseif ($huidige_positie > $vorige_positie) {
+        $verandering = "gezakt";
+    } else {
+        $verandering = "gelijk";    
+    }
+?>
     
-        ?>
+    
     
     <tr>
-        <td rowspan="3"> <?= $nummer["notering"] ?> </td> <td> 
+        <td rowspan="3" class="<?= $verandering ?>"> <?= $nummer["notering"] ?> </td> <td rowspan="3"> <img src="<?=  $nummer["afbeelding"] ?>" alt="iets"> </td> <td colspan="2"> <?= $nummer["titel"] ?>  </td> 
     </tr>
     <tr>
-        <td>  </td> 
+        <td colspan="2"> <?= $nummer["artiest"] ?> </td> 
     </tr>
     <tr>
-        <td> </td> 
+        <td> <?= $nummer["weken"] ?> </td> <td> <?= $nummer["vorige"] ?> </td> 
     </tr>
-    <tr>
-        <td></td> 
-    </tr>
+   
             <?php }?>
 </table>
     </body>
