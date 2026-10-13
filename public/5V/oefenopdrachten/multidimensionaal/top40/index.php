@@ -6,21 +6,66 @@
         <title>Top 40</title>
         <link rel="stylesheet" href="top40.css" />
         <style>
-            td{
-                border: 1px solid black;
+            table{
+                border-collapse: collapse;
+                width: 100%;
+               
             }
             .nieuw{
-                color blue: 
+               background-color: blue;
             }
             .gestegen{
-                color groen: 
+                background-color: green; 
             }
             .gezakt{
-                color rood: 
+                background-color: red;
             }
             .gelijk{
-                color geel: 
+                background-color: yellow;
             }
+            td {
+    padding: 10px;
+   
+    }
+
+/* Afbeeldingen */
+td img {
+    width: 70px;
+    height: 70px;
+}
+
+/* Verschillende kleuren */
+.nieuw {
+    background-color: lightblue;
+}
+
+.gestegen {
+    background-color: lightgreen;
+}
+
+.gezakt {
+    background-color: lightcoral;
+}
+
+.gelijk {
+    background-color: lightyellow;
+}
+
+/* Tekst */
+td {
+    font-size: 15px;
+}
+
+td:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Bij de muis over een rij */
+
+
+           
             </style>
     </head>
     <body>
@@ -50,13 +95,13 @@
     
     
     
-    <tr>
-        <td rowspan="3" class="<?= $verandering ?>"> <?= $nummer["notering"] ?> </td> <td rowspan="3"> <img src="<?=  $nummer["afbeelding"] ?>" alt="iets"> </td> <td colspan="2"> <?= $nummer["titel"] ?>  </td> 
+    <tr class="<?= $verandering ?>">
+        <td rowspan="3" > <?= $nummer["notering"] ?> </td> <td rowspan="3"> <img src="<?=  $nummer["afbeelding"] ?>" alt="iets"> </td> <td colspan="2"> <?= $nummer["titel"] ?>  </td> 
     </tr>
-    <tr>
+    <tr class="<?= $verandering ?>">
         <td colspan="2"> <?= $nummer["artiest"] ?> </td> 
     </tr>
-    <tr>
+    <tr class="<?= $verandering ?>">
         <td> <?= $nummer["weken"] ?> </td> <td> <?= $nummer["vorige"] ?> </td> 
     </tr>
    
