@@ -51,7 +51,22 @@
             z-index: 2 ;
             transition: 0.3s;
         }
+        
+        .informatie{
+            display: none;
+            grid-column: 1 / 3;
+            grid-row: 2;`
+            width: 200px;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+            border-radius: 8px;
             
+            
+        }
+        .film:has(img:hover) .informatie{
+            display: block;
+        }
             
             </style>
     </head>
@@ -84,17 +99,37 @@
                 <div class = "notering">
                     <?= $nummer["notering"] ?> 
                 </div>
+                
              <img src="afbeeldingen/<?= $nummer["image"] ?>" alt="iets">
                 <div class = "informatie">
                     <h3> <?= $nummer["titel"] ?> </h3>
                     <p> <?= $nummer["genre"] ?> </p>
                     <p> <?= $nummer["jaar"] ?> </p>
                     <p> <?= $nummer["synopsis"] ?> </p>
-                    <p> <?= $nummer["notering"] ?> </p>
-                    <p> <?= $nummer["notering"] ?> </p>
-                    <p> <?= $nummer["notering"] ?> </p>
-                    <p> <?= $nummer["notering"] ?> </p>
-                    <p> <?= $nummer["notering"] ?> </p>
+                    <p> 
+                        <?php
+                            if ($nummer["nieuw"] == true) {
+                                echo "Ja";
+                                }
+                            else {
+                                echo "Nee";
+                                }
+                        ?> </p>
+                    <p> <?php
+                            for ($j = 0; $j < count($nummer["cast"]); $j++) {
+                                echo $nummer["cast"][$j];
+
+                            if ($j < count($nummer["cast"]) - 1) {
+                                echo ",";
+                            }
+                            }
+                        ?>
+                            
+                            </p>
+                    <p> <?= $nummer["ratings"]["imdb"] ?> </p>
+                    <p> <?= $nummer["ratings"]["rotten_tomatoes"] ?> </p>
+                    <p> <?= $nummer["ratings"]["metacritic"] ?> </p>
+                </div>
         </div>
 
 
