@@ -27,7 +27,7 @@
         }
         .film {
             display: grid;
-            grid-template-columns: 120px 100px;
+            grid-template-columns: 120px 350px;
             grid-template-rows: 200px;
             align-items: center;
             position: relative;
@@ -47,7 +47,7 @@
 
         .poster img:hover {
             transform: scale(1.15);
-            transform-origin: top left;
+            
         }
 
         .notering {
@@ -67,25 +67,33 @@
         .poster img {
             display: block;
             transition: 0.3s;
+            
         }
         
         .informatie{
-            display: none;
+            visibility: hidden;
+            opacity: 0;
             position: absolute;
-            top: 112%;
-            left: 0;
+            top: 200px;
+            left: -25px;
+            width: 363px;
             z-index: 3;
             width: 363px;
             padding: 15px;
             background-color: #222;
             color: white;
             border-radius: 8px;
+           
+           
+            
             
             
         }
         
-        .poster:has(img:hover) .informatie{
-            display: block;
+        .poster:hover .informatie{
+           visibility: visible;
+           opacity: 1;
+           transition: 0.3s;
         }
         
         
