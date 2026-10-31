@@ -35,11 +35,15 @@ body{
             position: relative;
             width: max-content;
             z-index: 2;
+            
         }
 
         .poster img:hover {
             transform: scale(1.15);
-            
+        }
+
+        .poster:has(img:hover) .nieuw {
+            transform: scale(1.15);
         }
 
         .notering {
@@ -70,7 +74,6 @@ body{
             left: -25px;
             width: 363px;
             z-index: 3;
-            width: 363px;
             padding: 15px;
             background-color: #222;
             color: white;
@@ -98,4 +101,36 @@ body{
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
     }
+        }
+        .leeftijd {
+            background-color: darkred;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 8px;
+            width: max-content;
+            border-radius: 5px;
+        }
+        
+        .nieuw {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: darkred;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 3;
+        }
+        .ratings {
+            background-color: #333;
+            border-left: 4px solid darkred;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .ratings p {
+            margin: 8px;
         }

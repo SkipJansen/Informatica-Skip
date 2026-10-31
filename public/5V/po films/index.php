@@ -38,20 +38,18 @@
                 </div>
             <div class = "poster">
              <img src="afbeeldingen/<?= $nummer["image"] ?>" alt="iets">
+            <?php if ($nummer["nieuw"] == true) { ?>
+                <span class="nieuw">NIEUW</span>
+            <?php } ?>
                 <div class = "informatie">
-                    <h3> <?= $nummer["titel"] ?> </h3>
+                    <h3> <?= $nummer["titel"] ?></h3>
+                    <p class="leeftijd">
+                        <?= $nummer["leeftijd"] ?>
+                    </p>
                     <p>Genre: <br><?= $nummer["genre"] ?> </p>
+                    <p>Duur: <br><?= $nummer["duur"] ?> minuten </p>
                     <p>Jaar: <br><?= $nummer["jaar"] ?> </p>
                     <p>Synopsis:<br> <?= $nummer["synopsis"] ?> </p>
-                    <p>Nieuw: <br>
-                        <?php
-                            if ($nummer["nieuw"] == true) {
-                                echo "Ja";
-                                }
-                            else {
-                                echo "Nee";
-                                }
-                        ?> </p>
                     <p>Cast: <br>
                          <?php
                             for ($j = 0; $j < count($nummer["cast"]); $j++) {
@@ -64,9 +62,11 @@
                         ?>
                             
                             </p>
-                    <p>IMDd <?= $nummer["ratings"]["imdb"] ?> </p>
-                    <p>Rotten Tomatoes <?= $nummer["ratings"]["rotten_tomatoes"] ?>% </p>
-                    <p>Metacritic <?= $nummer["ratings"]["metacritic"] ?> </p>
+                    <div class = "ratings">
+                        <p>IMDd <?= $nummer["ratings"]["imdb"] ?> </p>
+                        <p>Rotten Tomatoes <?= $nummer["ratings"]["rotten_tomatoes"] ?>% </p>
+                        <p>Metacritic <?= $nummer["ratings"]["metacritic"] ?> </p>
+                    </div>
                 </div>
             </div>
         </div>
