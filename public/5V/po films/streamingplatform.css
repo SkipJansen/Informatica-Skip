@@ -102,6 +102,14 @@ body{
             gap: 30px;
     }
         }
+
+        @media (max-width: 1100px) {
+            .gridcontainer {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+    }
+        }
+        
         .leeftijd {
             background-color: darkred;
             color: white;
@@ -133,4 +141,12 @@ body{
 
         .ratings p {
             margin: 8px;
+        }
+        .synopsis {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ccc;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
         }

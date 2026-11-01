@@ -18,11 +18,12 @@
 <?php
 
     include("films.php");
-     for ( $i = 0 ; $i < count($films) ; $i++ ){
+    
+    for ( $i = 0 ; $i < count($films) ; $i++ ){
 
     $nummer = $films[$i];
 
-    if ($nummer["notering"] == 10) {
+    if ($nummer["notering"] > 9) {
         $class = "tien" ;
     } 
     else {
@@ -37,7 +38,7 @@
                     <?= $nummer["notering"] ?> 
                 </div>
             <div class = "poster">
-             <img src="afbeeldingen/<?= $nummer["image"] ?>" alt="iets">
+             <img src="afbeeldingen/<?= $nummer["image"] ?>" alt="filmposter">
             <?php if ($nummer["nieuw"] == true) { ?>
                 <span class="nieuw">NIEUW</span>
             <?php } ?>
@@ -46,26 +47,29 @@
                     <p class="leeftijd">
                         <?= $nummer["leeftijd"] ?>
                     </p>
-                    <p>Genre: <br><?= $nummer["genre"] ?> </p>
-                    <p>Duur: <br><?= $nummer["duur"] ?> minuten </p>
-                    <p>Jaar: <br><?= $nummer["jaar"] ?> </p>
-                    <p>Synopsis:<br> <?= $nummer["synopsis"] ?> </p>
+                    <p>Genre: <?= $nummer["genre"] ?> </p>
+                    <p>Duur: <?= $nummer["duur"] ?> minuten </p>
+                    <p>Jaar: <?= $nummer["jaar"] ?> </p>
+                    <p class="synopsis">
+                        Synopsis:<br>
+                        <?= $nummer["synopsis"] ?>
+                    </p>
                     <p>Cast: <br>
                          <?php
                             for ($j = 0; $j < count($nummer["cast"]); $j++) {
                                 echo $nummer["cast"][$j];
 
                             if ($j < count($nummer["cast"]) - 1) {
-                                echo ",";
+                                echo ", ";
                             }
                             }
                         ?>
                             
                             </p>
                     <div class = "ratings">
-                        <p>IMDd <?= $nummer["ratings"]["imdb"] ?> </p>
+                        <p>IMDd <?= $nummer["ratings"]["imdb"] ?>/10 </p>
                         <p>Rotten Tomatoes <?= $nummer["ratings"]["rotten_tomatoes"] ?>% </p>
-                        <p>Metacritic <?= $nummer["ratings"]["metacritic"] ?> </p>
+                        <p>Metacritic <?= $nummer["ratings"]["metacritic"] ?>/100 </p>
                     </div>
                 </div>
             </div>
